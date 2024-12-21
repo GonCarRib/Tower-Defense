@@ -18,7 +18,7 @@ public class Turret : MonoBehaviour{
        InvokeRepeating ("NovoAlvo", 0f, 0.5f); 
     }
 
-    void UpdateTarget()
+    void NovoAlvo()
     {
         GameObject[] monstros = GameObject.FindGameObjectsWithTag(monstroTag);
         float menorDistancia = Mathf.Infinity;
