@@ -7,15 +7,11 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour{
 
-    
     public Transform target;
     public float range = 15f;
 
-    public ScriptableObject script;
-
     public int dano = 0;
    
-
     public string monstroTag = "Monstro";
 
     public Transform Pivot;

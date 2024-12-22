@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 
 public class Enemy : MonoBehaviour
@@ -13,13 +14,15 @@ public class Enemy : MonoBehaviour
 
     public int vida = 100;
 
+
     int currentWaypoint = 0;
     float currentDisplacement = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        wayPoints = Waypoints.points;
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class Enemy : MonoBehaviour
         if (vida <= 0) {
             Destroy(this);
         }
+
         Move(currentDisplacement += speed * Time.deltaTime);
     }
 
@@ -35,8 +39,6 @@ public class Enemy : MonoBehaviour
     {
         if (currentWaypoint < wayPoints.Length - 1)
         {
-
-            
             transform.position = wayPoints[currentWaypoint].position + currentDisplacement * (wayPoints[currentWaypoint + 1].position - wayPoints[currentWaypoint].position);
             if (currentDisplacement >= 1 && currentWaypoint <= wayPoints.Length)
             {
