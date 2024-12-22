@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10308,7 +10308,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6cf9551e7a5175f45aea7ced33c26637,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1527148388}
+      addedObject: {fileID: 1527148391}
   m_SourcePrefab: {fileID: 100100000, guid: 6cf9551e7a5175f45aea7ced33c26637, type: 3}
 --- !u!1 &1208929916
 GameObject:
@@ -14056,7 +14056,28 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1206449257}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1527148388
+--- !u!135 &1527148389
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527148387}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.71
+  m_Center: {x: 0, y: 1.74, z: 0}
+--- !u!114 &1527148391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14080,33 +14101,7 @@ MonoBehaviour:
   - {fileID: 1062928378}
   - {fileID: 1623006844}
   speed: 0.2
---- !u!135 &1527148389
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527148387}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.71
-  m_Center: {x: 0, y: 1.74, z: 0}
---- !u!4 &1527148390 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6cf9551e7a5175f45aea7ced33c26637,
-    type: 3}
-  m_PrefabInstance: {fileID: 1206449257}
-  m_PrefabAsset: {fileID: 0}
+  vida: 100
 --- !u!1 &1535503658
 GameObject:
   m_ObjectHideFlags: 0
@@ -19123,11 +19118,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8048139392935779552, guid: 5c04d5f89cb652e46b84752e74be47ec,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1527148390}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

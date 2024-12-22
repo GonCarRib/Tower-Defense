@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+
+
 public class Turret : MonoBehaviour{
+
     
     public Transform target;
     public float range = 15f;
+
+    public ScriptableObject script;
+
+    public int dano = 0;
+   
 
     public string monstroTag = "Monstro";
 
@@ -35,6 +44,8 @@ public class Turret : MonoBehaviour{
 
         if (monstroProximo != null && menorDistancia <= range)
         {
+
+            monstroProximo.GetComponent<Enemy>().vida -=dano;
             target = monstroProximo.transform;
         }
         else

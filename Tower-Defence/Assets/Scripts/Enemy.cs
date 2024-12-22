@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 
-public class Navigation : MonoBehaviour
+
+public class Enemy : MonoBehaviour
 {
     //public Transform enemy;
 
     public Transform[] wayPoints;
     public float speed;
+
+    public int vida = 100;
 
     int currentWaypoint = 0;
     float currentDisplacement = 0;
@@ -23,6 +25,9 @@ public class Navigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (vida <= 0) {
+            Destroy(this);
+        }
         Move(currentDisplacement += speed * Time.deltaTime);
     }
 
