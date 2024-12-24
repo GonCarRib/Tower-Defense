@@ -6,25 +6,48 @@ public class SpawnEnemy : MonoBehaviour
 {
 
     public GameObject enemy;
+    static public List<GameObject> enemies = new List<GameObject>();
+    private int round = 0;
+    public int numMonstros = 1;
+    private bool delaySpawn = false;
 
-    float timer = 0.0f;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        float seconds = timer % 60;
+        Debug.Log(round);
 
-        if (seconds >= 5){ 
-            Instantiate(enemy);
-            timer = 0.0f;
+
+        if (enemies.Count == 0 && !delaySpawn)
+        {
+
+            StartCoroutine(SpawnComDelay(numMonstros, 1f)); // Preicsa disso para spawnar um monstro de cada vez
+            numMonstros += 5;
+            round++;
         }
-        
+    }
+
+    IEnumerator SpawnComDelay(int count, float tempo)
+    {
+        delaySpawn = true;
+        yield return new WaitForSeconds(5f);
+
+        for (int i = 0; i < count; i++)
+        {
+            GameObject newEnemy = Instantiate(enemy);
+            enemies.Add(newEnemy);
+
+            yield return new WaitForSeconds(tempo);
+        }
+
+        delaySpawn = false; 
+
     }
 }

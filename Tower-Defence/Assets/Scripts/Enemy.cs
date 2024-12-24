@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public Transform[] wayPoints;
     public float speed;
 
-    public int vida = 100;
+    public int vida = 1000000000;
 
 
     int currentWaypoint = 0;
@@ -29,7 +29,8 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (vida <= 0) {
-            Destroy(this);
+            SpawnEnemy.enemies.Remove(gameObject);
+            Destroy(gameObject);
         }
 
         Move(currentDisplacement += speed * Time.deltaTime);
@@ -45,6 +46,10 @@ public class Enemy : MonoBehaviour
                 currentDisplacement = 0;
                 currentWaypoint++;
             }
+        }
+        if (currentWaypoint == wayPoints.Length)
+        {
+            Destroy(this);
         }
     }
 }
