@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentWaypoint);
+        
         if (vida <= 0) {
             SpawnEnemy.enemies.Remove(gameObject);
             Destroy(gameObject);
@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour
         }
         if (currentWaypoint == wayPoints.Length -1)
         {
+            UIJogador.VidasP -= 10;
             SpawnEnemy.enemies.Remove(gameObject);
             Destroy(gameObject);
         }
