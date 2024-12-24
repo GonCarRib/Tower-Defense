@@ -7,7 +7,7 @@ public class SpawnEnemy : MonoBehaviour
 
     public GameObject enemy;
     static public List<GameObject> enemies = new List<GameObject>();
-    private int round = 0;
+    
     public int numMonstros = 1;
     private bool delaySpawn = false;
 
@@ -30,7 +30,7 @@ public class SpawnEnemy : MonoBehaviour
 
             StartCoroutine(SpawnComDelay(numMonstros, 1f)); // Preicsa disso para spawnar um monstro de cada vez
             numMonstros += 5;
-            round++;
+            UIJogador.Round ++;
         }
     }
 

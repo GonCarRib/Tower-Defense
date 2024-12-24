@@ -1,17 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIJogador : MonoBehaviour
 {
-    static public int VidasP = 150;
+    static public int VidasP = 1;
     static public int MoedasP = 20000;
+    static public int Round = 0;
+
 
     public TMP_Text TextoVidas;
     public TMP_Text TextoMoedas;
+    public TMP_Text TextoRound;
+
 
 
     // Start is called before the first frame update
@@ -23,10 +24,18 @@ public class UIJogador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        TextoVidas.text = VidasP.ToString();
-        TextoMoedas.text = MoedasP.ToString();
+        if (VidasP <= 0)
+        {
+            SceneManager.LoadScene("Game_Over");
+        }
+        else {
+            TextoVidas.text = VidasP.ToString();
+            TextoMoedas.text = MoedasP.ToString();
+            TextoRound.text = Round.ToString();
+        }
 
         
+
+
     }
 }
