@@ -1,13 +1,15 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIJogador : MonoBehaviour
 {
     static public int VidasP = 1;
     static public int MoedasP = 20000;
     static public int Round = 0;
-
+    static public GameObject Torre;
+    public GameObject TorreDefault;
 
     public TMP_Text TextoVidas;
     public TMP_Text TextoMoedas;
@@ -18,7 +20,7 @@ public class UIJogador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Torre = TorreDefault;
     }
 
     // Update is called once per frame
@@ -33,9 +35,5 @@ public class UIJogador : MonoBehaviour
             TextoMoedas.text = MoedasP.ToString();
             TextoRound.text = Round.ToString();
         }
-
-        
-
-
-    }
+    }       
 }

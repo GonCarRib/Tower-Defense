@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7827155767438884690}
   - component: {fileID: 484230306123035071}
   - component: {fileID: 5249697495112886504}
-  - component: {fileID: 192902440234903196}
+  - component: {fileID: -4446428884346543802}
   m_Layer: 0
   m_Name: cubo cubano
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &192902440234903196
+--- !u!114 &-4446428884346543802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,11 +115,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 75250870630019712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a1fcf8902f1924f97eed366f259711, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a019f7b0caca7f4e8aa5df02b1594df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingPrefab:
-  - {fileID: 75250870630019712}
-  numberOfBuildings: 33
-  interval: 1
-  firstBuildingPosition: {x: 0, y: 0}
