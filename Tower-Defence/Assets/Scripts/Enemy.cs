@@ -49,7 +49,8 @@ public class Enemy : MonoBehaviour
         }
         if (currentWaypoint == wayPoints.Length)
         {
-            Destroy(this);
+            SpawnEnemy.enemies.Remove(gameObject);
+            Destroy(gameObject);
         }
     }
 }
