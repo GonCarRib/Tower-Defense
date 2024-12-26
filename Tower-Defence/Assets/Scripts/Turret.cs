@@ -47,8 +47,6 @@ public class Turret : MonoBehaviour {
 
         if (monstroProximo != null && menorDistancia <= range)
         {
-
-            monstroProximo.GetComponent<Enemy>().vida -= dano;
             target = monstroProximo.transform;
         }
         else
@@ -72,7 +70,7 @@ public class Turret : MonoBehaviour {
             Shoot();
             fireCountdown = 1f / fireRate;
         }
-
+       
         fireCountdown -= Time.deltaTime;
     }
 
@@ -81,6 +79,7 @@ public class Turret : MonoBehaviour {
         Bullet bullet = bulletGo.GetComponent<Bullet>();
 
         if (bullet != null) {
+            bullet.Dano(dano);
             bullet.Seek(target);
         }
     }

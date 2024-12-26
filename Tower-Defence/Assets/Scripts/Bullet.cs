@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
 
     public float speed = 70f;
+
+    private int dano = 0;
+
+    public GameObject imapacto;
 
     public void Seek(Transform _target) { 
 
         target = _target;
+    }
+
+    public void Dano(int _dano) { 
+        dano = _dano;
+    
     }
 
     // Start is called before the first frame update
@@ -40,7 +49,8 @@ public class Bullet : MonoBehaviour
     }
 
     void HitTarget() {
-        Debug.Log("quiicanga");
+        target.GetComponent<Enemy>().vida -= dano;
+        Instantiate(imapacto,transform.position,transform.rotation);
         Destroy(gameObject);
     }
 }
