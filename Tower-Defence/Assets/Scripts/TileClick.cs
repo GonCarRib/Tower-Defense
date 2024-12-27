@@ -11,6 +11,8 @@ public class TileClick : MonoBehaviour
     private Boolean ocupado;
     private Renderer renderer;
     private Color corOriginal;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +30,11 @@ public class TileClick : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!ocupado && UIJogador.MoedasP >= 500)
+        if (!ocupado && UIJogador.MoedasP >= UIJogador.priceTorre)
         {
             ocupado = true;
             Instantiate(UIJogador.Torre, new Vector3(posicao.position.x, posicao.position.y + 0.52f, posicao.position.z), Quaternion.identity);
-            UIJogador.MoedasP -= 500;
+            UIJogador.MoedasP -= UIJogador.priceTorre;
         }
         
     }

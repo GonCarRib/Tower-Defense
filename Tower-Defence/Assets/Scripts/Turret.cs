@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour {
     public float range = 15f;
 
     public int dano = 0;
+    public int price = 0;
 
     public string monstroTag = "Monstro";
 
@@ -89,4 +90,5 @@ public class Turret : MonoBehaviour {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
 }

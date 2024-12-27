@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.Properties;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +15,8 @@ public class UIJogador : MonoBehaviour
     public TMP_Text TextoVidas;
     public TMP_Text TextoMoedas;
     public TMP_Text TextoRound;
+
+    public static int priceTorre;
 
 
 
@@ -35,5 +38,5 @@ public class UIJogador : MonoBehaviour
             TextoMoedas.text = MoedasP.ToString();
             TextoRound.text = Round.ToString();
         }
-    }       
+    }
 }

@@ -9,6 +9,7 @@ public class TowerButton : MonoBehaviour
 
     public Button button;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +26,10 @@ public class TowerButton : MonoBehaviour
     void TaskOnClick()
     {
         UIJogador.Torre = TorreB;
+
+        Turret turret = TorreB.GetComponent<Turret>();
+        UIJogador.priceTorre = turret.price;
+
+
     }
 }
