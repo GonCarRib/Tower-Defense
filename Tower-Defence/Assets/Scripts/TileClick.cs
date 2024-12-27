@@ -9,11 +9,15 @@ public class TileClick : MonoBehaviour
    
     public Transform posicao;
     private Boolean ocupado;
+    private Renderer renderer;
+    private Color corOriginal;
 
     // Start is called before the first frame update
     void Start()
     {
+        renderer = GetComponent<Renderer>();
         posicao = GetComponent<Transform>();
+        corOriginal = renderer.material.color;
     }
 
     // Update is called once per frame
@@ -31,4 +35,17 @@ public class TileClick : MonoBehaviour
         }
         
     }
+    private void OnMouseEnter()
+    {
+
+        if (!ocupado)
+        {
+            renderer.material.color = Color.green;
+        }
+    }
+    private void OnMouseExit()
+    {
+        renderer.material.color = corOriginal;
+    }
+
 }
