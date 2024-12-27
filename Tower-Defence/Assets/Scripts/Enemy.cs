@@ -11,9 +11,10 @@ public class Enemy : MonoBehaviour
 
     public Transform[] wayPoints;
     public float speed;
+    public int recompensa = 1;
 
     public int vida = 1000000000;
-
+    public int dano = 1;
 
     int currentWaypoint = 0;
     float currentDisplacement = 0;
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
     {
         
         if (vida <= 0) {
+            UIJogador.MoedasP += recompensa;
             SpawnEnemy.enemies.Remove(gameObject);
             Destroy(gameObject);
         }
@@ -50,7 +52,7 @@ public class Enemy : MonoBehaviour
         }
         if (currentWaypoint == wayPoints.Length -1)
         {
-            UIJogador.VidasP -= 10;
+            UIJogador.VidasP -= dano;
             SpawnEnemy.enemies.Remove(gameObject);
             Destroy(gameObject);
         }

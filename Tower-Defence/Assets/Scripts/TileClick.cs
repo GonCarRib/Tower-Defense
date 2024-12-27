@@ -28,10 +28,11 @@ public class TileClick : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!ocupado)
+        if (!ocupado && UIJogador.MoedasP >= 500)
         {
             ocupado = true;
             Instantiate(UIJogador.Torre, new Vector3(posicao.position.x, posicao.position.y + 0.52f, posicao.position.z), Quaternion.identity);
+            UIJogador.MoedasP -= 500;
         }
         
     }

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIJogador : MonoBehaviour
 {
-    static public int VidasP = 1;
-    static public int MoedasP = 20000;
+    static public int VidasP = 100;
+    static public int MoedasP = 700;
     static public int Round = 0;
     static public GameObject Torre;
     public GameObject TorreDefault;
