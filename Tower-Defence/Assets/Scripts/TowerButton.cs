@@ -24,7 +24,6 @@ public class TowerButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        Debug.Log("kkk");
         UIJogador.Torre = TorreB;
     }
 }

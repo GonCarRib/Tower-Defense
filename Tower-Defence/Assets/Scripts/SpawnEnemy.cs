@@ -24,9 +24,6 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
         if (enemies.Count == 0 && !delaySpawn)
         {
 
