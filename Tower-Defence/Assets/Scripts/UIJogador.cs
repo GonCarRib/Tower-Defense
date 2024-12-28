@@ -17,6 +17,7 @@ public class UIJogador : MonoBehaviour
     public TMP_Text TextoRound;
 
     public static int priceTorre ;
+    static public GameObject upgradePanel;
 
 
 
@@ -26,6 +27,8 @@ public class UIJogador : MonoBehaviour
         Torre = TorreDefault;
         Turret turret = TorreDefault.GetComponent<Turret>();
         priceTorre = turret.price;
+        upgradePanel = GameObject.FindWithTag("upgradePanel");
+        upgradePanel.SetActive(false);
     }
 
     // Update is called once per frame

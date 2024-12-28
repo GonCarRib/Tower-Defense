@@ -4,6 +4,8 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 
 
@@ -27,13 +29,14 @@ public class Turret : MonoBehaviour {
     public Transform firePoint;
     public int upgradeCost;
     public GameObject prefabUpgrade;
-    
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("NovoAlvo", 0f, 0.5f);
+
     }
 
     void NovoAlvo()
@@ -99,9 +102,11 @@ public class Turret : MonoBehaviour {
     void OnMouseDown()
     {
         UpgradeButton.Tower = gameObject;
+        UIJogador.upgradePanel.SetActive(true);
     }
 
     public void UpgradeTower() {
+        UIJogador.upgradePanel.SetActive(false);
         Vector3 posicao = gameObject.transform.position;   
         Instantiate(prefabUpgrade, new Vector3(posicao.x, posicao.y, posicao.z), Quaternion.identity);
         UIJogador.MoedasP -= upgradeCost;
