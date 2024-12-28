@@ -26,8 +26,9 @@ public class UpgradeButton : MonoBehaviour
     void TaskOnClick()
     {
         GameObject tower = Tower;
-        Turret turret  = tower.GetComponent<Turret>();
-
-        turret.UpgradeTower();
+        Turret turret = tower.GetComponent<Turret>();
+        if (UIJogador.MoedasP >= turret.upgradeCost) {
+            turret.UpgradeTower(); 
+        }  
     }
 }

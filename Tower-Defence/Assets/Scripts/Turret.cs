@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 
 
@@ -103,6 +104,7 @@ public class Turret : MonoBehaviour {
     public void UpgradeTower() {
         Vector3 posicao = gameObject.transform.position;   
         Instantiate(prefabUpgrade, new Vector3(posicao.x, posicao.y, posicao.z), Quaternion.identity);
+        UIJogador.MoedasP -= upgradeCost;
         Destroy(gameObject);
     }
 
