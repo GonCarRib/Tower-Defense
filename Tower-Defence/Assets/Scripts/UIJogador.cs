@@ -16,7 +16,7 @@ public class UIJogador : MonoBehaviour
     public TMP_Text TextoMoedas;
     public TMP_Text TextoRound;
 
-    public static int priceTorre;
+    public static int priceTorre ;
 
 
 
@@ -24,6 +24,8 @@ public class UIJogador : MonoBehaviour
     void Start()
     {
         Torre = TorreDefault;
+        Turret turret = TorreDefault.GetComponent<Turret>();
+        priceTorre = turret.price;
     }
 
     // Update is called once per frame

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -22,7 +23,10 @@ public class Turret : MonoBehaviour {
     private float fireCountdown = 0f;
 
     public GameObject prefabBullet;
-    public Transform firePoint; 
+    public Transform firePoint;
+    public int upgradeCost;
+    public GameObject prefabUpgrade;
+    
 
 
     // Start is called before the first frame update
@@ -89,6 +93,17 @@ public class Turret : MonoBehaviour {
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    void OnMouseDown()
+    {
+        UpgradeButton.Tower = gameObject;
+    }
+
+    public void UpgradeTower() {
+        Vector3 posicao = gameObject.transform.position;   
+        Instantiate(prefabUpgrade, new Vector3(posicao.x, posicao.y, posicao.z), Quaternion.identity);
+        Destroy(gameObject);
     }
 
 }

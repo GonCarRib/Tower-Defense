@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TowerButton : MonoBehaviour
+public class UpgradeButton : MonoBehaviour
 {
-    public GameObject TorreB;
+
+    public static GameObject Tower;
 
     public Button button;
-
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,9 @@ public class TowerButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        UIJogador.Torre = TorreB;
+        GameObject tower = Tower;
+        Turret turret  = tower.GetComponent<Turret>();
 
-        Turret turret = TorreB.GetComponent<Turret>();
-        UIJogador.priceTorre = turret.price;
+        turret.UpgradeTower();
     }
 }
