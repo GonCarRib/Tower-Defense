@@ -293,6 +293,7 @@ MonoBehaviour:
   upgradeCost: 1000
   prefabUpgrade: {fileID: 8086636167688888925, guid: 0ac066ac9ada965418cb3f7878feba7f,
     type: 3}
+  sellCost: 150
 --- !u!65 &6554516432469862375
 BoxCollider:
   m_ObjectHideFlags: 0

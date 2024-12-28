@@ -29,6 +29,8 @@ public class Turret : MonoBehaviour {
     public Transform firePoint;
     public int upgradeCost;
     public GameObject prefabUpgrade;
+    public int sellCost;
+    
 
 
 
@@ -36,7 +38,7 @@ public class Turret : MonoBehaviour {
     void Start()
     {
         InvokeRepeating("NovoAlvo", 0f, 0.5f);
-
+        
     }
 
     void NovoAlvo()
@@ -102,14 +104,26 @@ public class Turret : MonoBehaviour {
     void OnMouseDown()
     {
         UpgradeButton.Tower = gameObject;
+        SellButton.Tower = gameObject;
         UIJogador.upgradePanel.SetActive(true);
+        UIJogador.selectedIcon.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 3, gameObject.transform.position.z);
+        UIJogador.selectedIcon.SetActive(true);
+        
     }
 
     public void UpgradeTower() {
+        UIJogador.selectedIcon.SetActive(false);
         UIJogador.upgradePanel.SetActive(false);
         Vector3 posicao = gameObject.transform.position;   
         Instantiate(prefabUpgrade, new Vector3(posicao.x, posicao.y, posicao.z), Quaternion.identity);
         UIJogador.MoedasP -= upgradeCost;
+        Destroy(gameObject);
+    }
+    public void SellTower()
+    {
+        UIJogador.selectedIcon.SetActive(false);
+        UIJogador.upgradePanel.SetActive(false);
+        UIJogador.MoedasP += sellCost;
         Destroy(gameObject);
     }
 

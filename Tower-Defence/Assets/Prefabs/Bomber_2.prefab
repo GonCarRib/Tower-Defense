@@ -292,6 +292,7 @@ MonoBehaviour:
   firePoint: {fileID: 7952081694978335757}
   upgradeCost: 0
   prefabUpgrade: {fileID: 0}
+  sellCost: 500
 --- !u!1 &8498335154957005758
 GameObject:
   m_ObjectHideFlags: 0

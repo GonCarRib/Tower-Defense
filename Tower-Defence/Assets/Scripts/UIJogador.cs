@@ -18,6 +18,7 @@ public class UIJogador : MonoBehaviour
 
     public static int priceTorre ;
     static public GameObject upgradePanel;
+    static public GameObject selectedIcon;
 
 
 
@@ -29,6 +30,8 @@ public class UIJogador : MonoBehaviour
         priceTorre = turret.price;
         upgradePanel = GameObject.FindWithTag("upgradePanel");
         upgradePanel.SetActive(false);
+        selectedIcon = GameObject.FindWithTag("Selected");
+        selectedIcon.SetActive(false);
     }
 
     // Update is called once per frame

@@ -376,3 +376,4 @@ MonoBehaviour:
   firePoint: {fileID: 6677914315052204754}
   upgradeCost: 0
   prefabUpgrade: {fileID: 0}
+  sellCost: 500
