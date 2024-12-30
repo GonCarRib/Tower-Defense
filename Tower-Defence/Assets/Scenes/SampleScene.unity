@@ -4296,7 +4296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283141492}
   m_Layer: 0
-  m_Name: Gruta
+  m_Name: Cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6777,7 +6777,7 @@ GameObject:
   - component: {fileID: 730194197}
   - component: {fileID: 730194196}
   m_Layer: 0
-  m_Name: Caminho (4)
+  m_Name: Path 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8218,7 +8218,7 @@ GameObject:
   - component: {fileID: 1251445988}
   - component: {fileID: 1251445987}
   m_Layer: 0
-  m_Name: Caminho (8)
+  m_Name: Path 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8496,7 +8496,7 @@ GameObject:
   - component: {fileID: 1257975767}
   - component: {fileID: 1257975766}
   m_Layer: 0
-  m_Name: Caminho (6)
+  m_Name: Path 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9638,7 +9638,7 @@ GameObject:
   - component: {fileID: 1435281685}
   - component: {fileID: 1435281684}
   m_Layer: 0
-  m_Name: Caminho (5)
+  m_Name: Path 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10450,7 +10450,7 @@ GameObject:
   - component: {fileID: 1584033475}
   - component: {fileID: 1584033474}
   m_Layer: 0
-  m_Name: Caminho (2)
+  m_Name: Path 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11728,7 +11728,7 @@ GameObject:
   - component: {fileID: 1847408140}
   - component: {fileID: 1847408139}
   m_Layer: 0
-  m_Name: Caminho (1)
+  m_Name: Path 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12148,7 +12148,7 @@ GameObject:
   - component: {fileID: 1855891255}
   - component: {fileID: 1855891254}
   m_Layer: 0
-  m_Name: Caminho (7)
+  m_Name: Path 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13993,7 +13993,7 @@ GameObject:
   - component: {fileID: 2108085808}
   - component: {fileID: 2108085807}
   m_Layer: 0
-  m_Name: Caminho (3)
+  m_Name: Path 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15169,7 +15169,7 @@ PrefabInstance:
     - target: {fileID: 3893038294977396474, guid: ce0deefad0e85f840892ef6d99532b12,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 530
+      value: 533
       objectReference: {fileID: 0}
     - target: {fileID: 3893038294977396474, guid: ce0deefad0e85f840892ef6d99532b12,
         type: 3}
@@ -15184,7 +15184,7 @@ PrefabInstance:
     - target: {fileID: 4380096381822593595, guid: ce0deefad0e85f840892ef6d99532b12,
         type: 3}
       propertyPath: m_Name
-      value: Caminho
+      value: Path
       objectReference: {fileID: 0}
     - target: {fileID: 5541094865067588132, guid: ce0deefad0e85f840892ef6d99532b12,
         type: 3}

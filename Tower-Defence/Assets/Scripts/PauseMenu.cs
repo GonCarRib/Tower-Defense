@@ -6,18 +6,18 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public static bool IsGamePaused = false;
+    public static bool IsGamePaused = false; // sees if game paused
 
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenuUI; // The gameObject of the Menu Ui
 
     // Update is called once per frame
 
     void Update(){
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) // key where you pause the game
         {
-            if(IsGamePaused)
+            if(IsGamePaused) // checks if game is paused
             {
-                Resume();
+                Resume(); 
             }else{
                 Pause();
             }
@@ -25,26 +25,26 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    void Resume()
+    void Resume() // Resumes the game
     {
          pauseMenuUI.SetActive(false);
          Time.timeScale = 1f;
          IsGamePaused = false;
     }
 
-    void Pause()
+    void Pause() // Pause the game
     {
          pauseMenuUI.SetActive(true);
          Time.timeScale = 0f;
          IsGamePaused = true;
     }
 
-    public void LoadMenu()
+    public void LoadMenu() // Load Main menu
     {
         SceneManager.LoadScene("Menu");
     }
 
-    public void Quit()
+    public void Quit() // Quits Game
     {
         Application.Quit();
     }

@@ -1199,7 +1199,7 @@ GameObject:
   - component: {fileID: 3616198223097754387}
   - component: {fileID: 1623661453613853259}
   m_Layer: 0
-  m_Name: Demon (1)
+  m_Name: Demon
   m_TagString: Monstro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

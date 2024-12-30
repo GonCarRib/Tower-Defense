@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5541094865067588132}
   - component: {fileID: 1195626841163157773}
   m_Layer: 0
-  m_Name: Caminho
+  m_Name: Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

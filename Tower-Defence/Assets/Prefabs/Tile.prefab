@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5249697495112886504}
   - component: {fileID: -4446428884346543802}
   m_Layer: 0
-  m_Name: cubo cubano
+  m_Name: Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

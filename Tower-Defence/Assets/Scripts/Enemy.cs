@@ -7,41 +7,42 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
 {
-    //public Transform enemy;
 
-    public Transform[] wayPoints;
-    public float speed;
-    public int recompensa = 1;
+    public Transform[] wayPoints; // Waypoints that will follow throughout the scene
 
-    public int vida = 1000000000;
-    public int dano = 1;
+    public float speed; // Speed that it moves
 
-    int currentWaypoint = 0;
+    public int Reward = 1; //Money the player receives for killing this time of enemy
+
+    public int Life = 1; //  How much life does the monster have
+    public int damage = 1; // How much damage does the monster give
+
+    int currentWaypoint = 0; // The current waypoint of the monster
+
     float currentDisplacement = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        wayPoints = Waypoints.points;
+        wayPoints = Waypoints.points; // Associates the waypoints variable with the right points
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (vida <= 0) {
-            UIJogador.MoedasP += recompensa;
+        if (Life <= 0) { 
+            UIJogador.MoedasP += Reward;
             SpawnEnemy.enemies.Remove(gameObject);
             Destroy(gameObject);
-        }
+        } // if the monster life is equal or less than zero it dies an gives the reward to the player
 
-        Move(currentDisplacement += speed * Time.deltaTime);
+        Move(currentDisplacement += speed * Time.deltaTime); // if life diferent from 0 it moves
     }
 
     void Move(float displacement)
     {
-        if (currentWaypoint < wayPoints.Length - 1)
+        if (currentWaypoint < wayPoints.Length - 1) // while the current waypoint is smaler than its length the monster moves
         {
             transform.position = wayPoints[currentWaypoint].position + currentDisplacement * (wayPoints[currentWaypoint + 1].position - wayPoints[currentWaypoint].position);
             if (currentDisplacement >= 1 && currentWaypoint <= wayPoints.Length)
@@ -50,11 +51,11 @@ public class Enemy : MonoBehaviour
                 currentWaypoint++;
             }
         }
-        if (currentWaypoint == wayPoints.Length -1)
+        if (currentWaypoint == wayPoints.Length -1) // if currentWaypoint is equal to its lenght it means its int the end of the track
         {
-            UIJogador.VidasP -= dano;
-            SpawnEnemy.enemies.Remove(gameObject);
-            Destroy(gameObject);
+            UIJogador.VidasP -= damage; // Subtracts Monster damage from the player's health
+            SpawnEnemy.enemies.Remove(gameObject); // the monster is remove from the Monster[] Array in the Spwner script
+            Destroy(gameObject); //the monster is destroyed
         }
     }
 }

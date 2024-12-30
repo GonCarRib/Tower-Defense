@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class UIJogador : MonoBehaviour
 {
     static public int VidasP = 100;
-    static public int MoedasP = 700;
+    static public int MoedasP = 0;
+    static public int beginning_Coins = 1000;
     static public int Round = 0;
     static public GameObject Torre;
     public GameObject TorreDefault;
+   
 
     public TMP_Text TextoVidas;
     public TMP_Text TextoMoedas;
@@ -25,6 +27,7 @@ public class UIJogador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MoedasP = beginning_Coins;
         Torre = TorreDefault;
         Turret turret = TorreDefault.GetComponent<Turret>();
         priceTorre = turret.price;

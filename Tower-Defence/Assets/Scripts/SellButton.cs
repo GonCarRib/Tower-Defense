@@ -6,27 +6,23 @@ using UnityEngine.UI;
 public class SellButton : MonoBehaviour
 
 {
+    public static GameObject Tower; // Current Tower selected
 
-    public static GameObject Tower;
+    public Button button; // Sell button
 
-    public Button button;
     // Start is called before the first frame update
     void Start()
     {
-        button.onClick.AddListener(TaskOnClick);
+        button.onClick.AddListener(TaskOnClick); // Function TaskOnClick() doesn't work without this
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 
-    void TaskOnClick()
+    void TaskOnClick() 
     {
-        GameObject tower = Tower;
-        Turret turret = tower.GetComponent<Turret>();
-        turret.SellTower();
+        GameObject tower = Tower; // tower will be equal to current Tower 
+        Turret turret = tower.GetComponent<Turret>(); // Get the "Turret" Script
+        turret.SellTower(); // Use the Funcion SellTower() in the previus script to sell the tower
 
     }
 }

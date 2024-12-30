@@ -98,5 +98,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 70
   explosionRad: 7000000
-  imapacto: {fileID: 5563191633542594243, guid: 57f77d9ee1ecd504aa327762482d2b3d,
+  impactEffect: {fileID: 5563191633542594243, guid: 57f77d9ee1ecd504aa327762482d2b3d,
     type: 3}

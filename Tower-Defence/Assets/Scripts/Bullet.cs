@@ -5,39 +5,35 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Transform target;
+    private Transform target;  // the monsters that the bullet is targeting 
 
-    public float speed = 70f;
+    public float speed = 70f; // speed of the bulle
 
-    private int dano = 0;
+    private int damage = 0; // damage of the bullet
 
-    public float explosionRad = 0f;
+    public float explosionRad = 0f; // explosion radius of bullet if 0 just kils 1 enemy 
 
-    public GameObject imapacto;
+    public GameObject impactEffect; // prefab of the explosion when hiting enemey
 
 
 
     public void Seek(Transform _target) { 
+        target = _target; 
+    }// gets the target from the turret script
 
-        target = _target;
-    }
-
-    public void Dano(int _dano) { 
-        dano = _dano;
-    
-    }
-
-    // Start is called before the first frame update
+    public void Dano(int _damage) {
+        damage = _damage;
+    }// gets the damage from the turret script
+  
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (target == null) { 
-            Destroy(gameObject);
+            Destroy(gameObject); // if the theres no more target the bullet is destroyed
             return;
         }
 
@@ -53,14 +49,14 @@ public class Bullet : MonoBehaviour
     }
 
     void HitTarget() {
-        Instantiate(imapacto, transform.position, transform.rotation);
+        Instantiate(impactEffect, transform.position, transform.rotation);
         if (explosionRad > 0f)
         {
             Explode();
 
         }
         else {
-            target.GetComponent<Enemy>().vida -= dano;
+            target.GetComponent<Enemy>().Life -= damage;
         }
         Destroy(gameObject);
     }
@@ -70,7 +66,7 @@ public class Bullet : MonoBehaviour
         foreach (Collider collider in colliders)
         {
             if (collider.tag == "Monstro") {
-                collider.GetComponent<Enemy>().vida -= dano;
+                collider.GetComponent<Enemy>().Life -= damage;
               
             }
         } 

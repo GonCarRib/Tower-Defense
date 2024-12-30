@@ -19,6 +19,8 @@ public class BuildingCreator : MonoBehaviour
     [ContextMenu("Generate Buildings")]
     private void CreateBuildings()
     {
+        // This script was used to create the tiles
+
         for (int y = 0; y < numberOfBuildings; y++)
             for (int x = 0; x < numberOfBuildings; x++)
             {
