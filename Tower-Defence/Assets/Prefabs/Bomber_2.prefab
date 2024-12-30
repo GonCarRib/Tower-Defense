@@ -287,7 +287,7 @@ MonoBehaviour:
   Pivot: {fileID: 9033110567320612777}
   turnSpeed: 10
   fireRate: 0.5
-  prefabBullet: {fileID: 2674213284505716926, guid: 3f374d0c9a23ed44aaa74130b16537a4,
+  prefabBullet: {fileID: 1880412276373838022, guid: 7d10a3b5bb71a8c448a3d6a0208e34d0,
     type: 3}
   firePoint: {fileID: 7952081694978335757}
   upgradeCost: 0

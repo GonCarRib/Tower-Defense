@@ -106,7 +106,7 @@ public class Turret : MonoBehaviour {
         UpgradeButton.Tower = gameObject;
         SellButton.Tower = gameObject;
         UIJogador.upgradePanel.SetActive(true);
-        UIJogador.selectedIcon.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 3, gameObject.transform.position.z);
+        UIJogador.selectedIcon.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2.5f, gameObject.transform.position.z- 0.4f);
         UIJogador.selectedIcon.SetActive(true);
         
     }
