@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wayPoints: []
   speed: 0.2
-  recompensa: 1000000
+  recompensa: 10000
   vida: 100
   dano: 1
 --- !u!1 &5190829316058592697
