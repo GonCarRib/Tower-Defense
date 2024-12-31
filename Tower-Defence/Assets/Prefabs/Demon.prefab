@@ -1259,9 +1259,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wayPoints: []
   speed: 0.2
-  recompensa: 10000
-  vida: 100
-  dano: 1
+  Reward: 30
+  Life: 1
+  damage: 1
+  spawnsOthers: 0
 --- !u!1 &5190829316058592697
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,13 @@ public class Enemy : MonoBehaviour
 
     float currentDisplacement = 0;
 
+    public bool spawnsOthers = false;
+
+    public int numberOfOthers;
+    
+    public GameObject spawnMonster;
+   
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +40,16 @@ public class Enemy : MonoBehaviour
     {
         if (Life <= 0) { 
             UIJogador.MoedasP += Reward;
-            SpawnEnemy.enemies.Remove(gameObject);
+            if (spawnsOthers)
+
+            {
+                for (int i = 0; i < numberOfOthers; i++) {
+                    GameObject extraMonster = Instantiate(spawnMonster, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
+                    Enemy spawnExtraMonster = extraMonster.GetComponent<Enemy>();
+                    spawnExtraMonster.pegaWaypoint(currentWaypoint);
+                }
+            }
+            SpawnEnemy.totalMonsters.Remove(gameObject);
             Destroy(gameObject);
         } // if the monster life is equal or less than zero it dies an gives the reward to the player
 
@@ -54,8 +70,15 @@ public class Enemy : MonoBehaviour
         if (currentWaypoint == wayPoints.Length -1) // if currentWaypoint is equal to its lenght it means its int the end of the track
         {
             UIJogador.VidasP -= damage; // Subtracts Monster damage from the player's health
-            SpawnEnemy.enemies.Remove(gameObject); // the monster is remove from the Monster[] Array in the Spwner script
+            SpawnEnemy.totalMonsters.Remove(gameObject); // the monster is remove from the Monster[] Array in the Spwner script
             Destroy(gameObject); //the monster is destroyed
         }
+    }
+
+
+
+    public void pegaWaypoint(int _currentWaypoint)
+    {
+        currentWaypoint = _currentWaypoint;
     }
 }

@@ -11079,8 +11079,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f4125c1cec4604eae912c83cfc282e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 5182353486030476508, guid: 7b10983f6b6560d48b9c4b0da4453aa9, type: 3}
-  numMonstros: 1
+  spawnMonsters:
+  - {fileID: 5182353486030476508, guid: 7b10983f6b6560d48b9c4b0da4453aa9, type: 3}
+  - {fileID: 353092721522064274, guid: 4791a7b7c04ba044486f8253a6948005, type: 3}
+  - {fileID: 7490729735412797033, guid: c6bf6105fb6821a419e7db5f9882b9ab, type: 3}
+  tier: 0
+  numMonsters: 1
 --- !u!4 &1658500147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4805748754362467198, guid: 1e7a4d5583787044fa2b82ac15e0563a,
