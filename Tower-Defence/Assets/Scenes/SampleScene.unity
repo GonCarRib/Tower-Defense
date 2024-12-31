@@ -11080,7 +11080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnMonsters:
-  - {fileID: 5182353486030476508, guid: 7b10983f6b6560d48b9c4b0da4453aa9, type: 3}
+  - {fileID: 7490729735412797033, guid: c6bf6105fb6821a419e7db5f9882b9ab, type: 3}
   - {fileID: 353092721522064274, guid: 4791a7b7c04ba044486f8253a6948005, type: 3}
   - {fileID: 7490729735412797033, guid: c6bf6105fb6821a419e7db5f9882b9ab, type: 3}
   tier: 0
