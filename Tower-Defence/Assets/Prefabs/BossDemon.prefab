@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints: []
-  speed: 0.1
+  speed: 0.2
   Reward: 1000
   Life: 1000
   damage: 50

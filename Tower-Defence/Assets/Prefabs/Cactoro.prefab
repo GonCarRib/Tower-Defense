@@ -120,11 +120,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints: []
-  speed: 0.3
-  Reward: 1
-  Life: 1
-  damage: 1
+  speed: 0.4
+  Reward: 100
+  Life: 10
+  damage: 2
   spawnsOthers: 0
+  numberOfOthers: 0
+  spawnMonster: {fileID: 0}
 --- !u!65 &5183112037137257956
 BoxCollider:
   m_ObjectHideFlags: 0

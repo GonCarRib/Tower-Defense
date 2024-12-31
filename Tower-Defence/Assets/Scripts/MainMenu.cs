@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour{
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // This line of code loads the next queued scene
-        UIJogador.MoedasP = UIJogador.beginning_Coins;
+        UIJogador.CoinsP = UIJogador.beginning_Coins;
     }
 
     public void QuitGame() // Quits the game

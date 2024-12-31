@@ -281,7 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   range: 3
-  dano: 10
+  Damage: 5
   price: 300
   monstroTag: Monstro
   Pivot: {fileID: 4021438799024503630}

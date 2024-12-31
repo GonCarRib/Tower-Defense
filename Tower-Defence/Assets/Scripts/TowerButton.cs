@@ -5,28 +5,22 @@ using UnityEngine.UI;
 
 public class TowerButton : MonoBehaviour
 {
-    public GameObject TorreB;
+    public GameObject TowerPrefab; //Tower prefab 
 
-    public Button button;
+    public Button button;   // Button with tower
 
 
     // Start is called before the first frame update
     void Start()
     {
-        button.onClick.AddListener(TaskOnClick);
+        button.onClick.AddListener(TaskOnClick);  // Function TaskOnClick() doesn't work without this
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+ 
     void TaskOnClick()
     {
-        UIJogador.Torre = TorreB;
-
-        Turret turret = TorreB.GetComponent<Turret>();
-        UIJogador.priceTorre = turret.price;
+        UIJogador.Tower = TowerPrefab; // UIPlayer tower will be equal to current Tower 
+        Turret turret = TowerPrefab.GetComponent<Turret>(); // Get the "Turret" Script
+        UIJogador.priceTower = turret.price; //UIPlayer.priceTower is global variable so now all scripts know the price of the tower
     }
 }

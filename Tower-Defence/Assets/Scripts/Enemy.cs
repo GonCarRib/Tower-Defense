@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (Life <= 0) { 
-            UIJogador.MoedasP += Reward;
+            UIJogador.CoinsP += Reward;
             if (spawnsOthers)
 
             {
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
         }
         if (currentWaypoint == wayPoints.Length -1) // if currentWaypoint is equal to its lenght it means its int the end of the track
         {
-            UIJogador.VidasP -= damage; // Subtracts Monster damage from the player's health
+            UIJogador.LivesP -= damage; // Subtracts Monster damage from the player's health
             SpawnEnemy.totalMonsters.Remove(gameObject); // the monster is remove from the Monster[] Array in the Spwner script
             Destroy(gameObject); //the monster is destroyed
         }
