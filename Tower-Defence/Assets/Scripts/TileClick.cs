@@ -11,6 +11,7 @@ public class TileClick : MonoBehaviour
     private Boolean Occupied; // if the tile has a tower or not
     private Renderer rend; //Rendere of the tile
     private Color OriginalColor; // Original color of the tile
+    public float Height; //Height of the weapon
 
 
 
@@ -27,7 +28,7 @@ public class TileClick : MonoBehaviour
         if (!Occupied && UIJogador.CoinsP >= UIJogador.priceTower) // if the player has enough coins and the tile is not occupied
         {
             Occupied = true;
-            Instantiate(UIJogador.Tower, new Vector3(TilePosition.position.x, TilePosition.position.y + 0.52f, TilePosition.position.z), Quaternion.identity); // puts the turret in the tile
+            Instantiate(UIJogador.Tower, new Vector3(TilePosition.position.x, TilePosition.position.y + Height, TilePosition.position.z), Quaternion.identity); // puts the turret in the tile
             UIJogador.CoinsP -= UIJogador.priceTower; // takes the cost of the tower from the player coins
         }
 
