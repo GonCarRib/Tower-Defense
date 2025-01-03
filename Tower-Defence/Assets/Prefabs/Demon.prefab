@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834969824866203730}
-  - component: {fileID: 6431950505990291412}
+  - component: {fileID: 1595232416627960857}
   m_Layer: 0
   m_Name: Wing1.R
   m_TagString: Untagged
@@ -192,7 +192,7 @@ Transform:
   - {fileID: 5026330329213596087}
   m_Father: {fileID: 2212453932951830138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6431950505990291412
+--- !u!95 &1595232416627960857
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ Animator:
   m_GameObject: {fileID: 893713511053439687}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9eb6ac5f7d7129e47ae76b6607330663, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8844020890b3bc14f95c69d52a31d16d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1781,7 +1781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4479441349778234105}
-  - component: {fileID: 956399144970416217}
+  - component: {fileID: 8804091020142114681}
   m_Layer: 0
   m_Name: Wing1.L
   m_TagString: Untagged
@@ -1805,7 +1805,7 @@ Transform:
   - {fileID: 3142634552635773645}
   m_Father: {fileID: 2212453932951830138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &956399144970416217
+--- !u!95 &8804091020142114681
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -1815,7 +1815,7 @@ Animator:
   m_GameObject: {fileID: 7026815423972269652}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb721b0226ed2cf4b999a80ede2765fa, type: 2}
+  m_Controller: {fileID: 9100000, guid: 11470d620759b65469054524b043bf37, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
