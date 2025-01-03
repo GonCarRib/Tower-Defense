@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
     public int numberOfOthers;
     
     public GameObject spawnMonster;
+
+    public float turnSpeed = 5f;
    
 
 
@@ -66,6 +68,8 @@ public class Enemy : MonoBehaviour
                 currentDisplacement = 0;
                 currentWaypoint++;
             }
+
+            transform.LookAt(wayPoints[currentWaypoint+1].position);
         }
         if (currentWaypoint == wayPoints.Length -1) // if currentWaypoint is equal to its lenght it means its int the end of the track
         {
