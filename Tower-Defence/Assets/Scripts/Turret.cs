@@ -124,6 +124,7 @@ public class Turret : MonoBehaviour {
     }
     public void SellTower() // Sells the tower
     {
+        UIJogador.RecebeuDinheiro = true;
         UIJogador.selectedIcon.SetActive(false);
         UIJogador.upgradePanel.SetActive(false);
         UIJogador.CoinsP += sellCost;  // gives the money to the player

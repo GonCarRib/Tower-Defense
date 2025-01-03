@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.Properties;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class UIJogador : MonoBehaviour
     static public int Round = 0;    //Round number
     static public GameObject Tower; //Select tower 
     public GameObject DefaultTower; // Default tower
+    static public Boolean RecebeuDinheiro = false;  
+    public AudioSource Moneysound;
    
 
     public TMP_Text Text_Lives; // lives text
@@ -24,9 +27,12 @@ public class UIJogador : MonoBehaviour
 
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         CoinsP = beginning_Coins;   //Player coins get initialized
         Tower = DefaultTower;       
         Turret turret = DefaultTower.GetComponent<Turret>(); // Gets "Turret" Script
@@ -49,5 +55,11 @@ public class UIJogador : MonoBehaviour
             Text_Coins.text = CoinsP.ToString();    // updates all player information
             TextRound.text = Round.ToString();      // updates all player information
         }
+
+        if (RecebeuDinheiro) { 
+            Moneysound.Play();
+            RecebeuDinheiro = false; 
+        }
+
     }
 }

@@ -42,8 +42,8 @@ public class Enemy : MonoBehaviour
     {
         if (Life <= 0) { 
             UIJogador.CoinsP += Reward;
+            UIJogador.RecebeuDinheiro = true;
             if (spawnsOthers)
-
             {
                 for (int i = 0; i < numberOfOthers; i++) {
                     GameObject extraMonster = Instantiate(spawnMonster, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), Quaternion.identity);
