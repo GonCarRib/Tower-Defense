@@ -29,7 +29,8 @@ public class Turret : MonoBehaviour {
     public Transform firePoint;     // Where the bullet is gonna come out
     public int upgradeCost; // Upgrade Cost
     public GameObject prefabUpgrade; // Prefab  of the upgrade
-    public int sellCost;  // SellCost
+    public int sellPrice;  // SellCost
+    public GameObject tile;
     
 
 
@@ -109,12 +110,16 @@ public class Turret : MonoBehaviour {
         UpgradeButton.Tower = gameObject;   //upgrade button
         SellButton.Tower = gameObject;      //sell button
         UIJogador.upgradePanel.SetActive(true); // makes the upgrade/sell panel visibel  
+        UIJogador.Text_upgrade.text = upgradeCost.ToString();
+        UIJogador.Text_Sell.text = sellPrice.ToString();  
         UIJogador.selectedIcon.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2.5f, gameObject.transform.position.z- 0.4f); // makes the a green icon appear in the top of the turret
         UIJogador.selectedIcon.SetActive(true); // makes the icon appear
         
     }
 
     public void UpgradeTower() {
+        UIJogador.Text_upgrade.text = "";
+        UIJogador.Text_Sell.text = "";
         UIJogador.selectedIcon.SetActive(false);    //makes the icon disappear 
         UIJogador.upgradePanel.SetActive(false);    // makes the upgrade/sell disappear
         Vector3 posicao = gameObject.transform.position;  // gets the position of the turret
@@ -125,10 +130,13 @@ public class Turret : MonoBehaviour {
     public void SellTower() // Sells the tower
     {
         UIJogador.RecebeuDinheiro = true;
+        UIJogador.Text_upgrade.text = "";
+        UIJogador.Text_Sell.text = "";
         UIJogador.selectedIcon.SetActive(false);
         UIJogador.upgradePanel.SetActive(false);
-        UIJogador.CoinsP += sellCost;  // gives the money to the player
+        UIJogador.CoinsP += sellPrice;  // gives the money to the player
         Destroy(gameObject);    //destroyes the object
+
     }
 
 }

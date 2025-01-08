@@ -286,14 +286,14 @@ MonoBehaviour:
   monstroTag: Monstro
   Pivot: {fileID: 4021438799024503630}
   turnSpeed: 10
-  fireRate: 30
+  fireRate: 1
   prefabBullet: {fileID: 2674213284505716926, guid: 3f374d0c9a23ed44aaa74130b16537a4,
     type: 3}
   firePoint: {fileID: 1628681081961971439}
   upgradeCost: 1000
   prefabUpgrade: {fileID: 8086636167688888925, guid: 0ac066ac9ada965418cb3f7878feba7f,
     type: 3}
-  sellCost: 150
+  sellPrice: 150
 --- !u!65 &6554516432469862375
 BoxCollider:
   m_ObjectHideFlags: 0

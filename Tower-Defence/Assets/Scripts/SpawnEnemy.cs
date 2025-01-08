@@ -27,6 +27,7 @@ public class SpawnEnemy : MonoBehaviour
         numMonsters = 1;
         tier = 0;
         delaySpawn = false;
+       
     }
 
     // Update is called once per frame
@@ -38,6 +39,10 @@ public class SpawnEnemy : MonoBehaviour
             StartCoroutine(SpawnWithDelay(numMonsters, 0.4f)); // Spawns one monster at a time
             numMonsters += 5; // increment the variable with 5 more
             UIJogador.Round++; // round is incremented +1
+            if (UIJogador.Round % 7 == 0)
+            {
+                UIJogador.dificultymeter += 0.2f;
+            }
             if (UIJogador.Round >= 2)
             {
                 tier = 2;

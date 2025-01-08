@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     public int Reward = 1; //Money the player receives for killing this time of enemy
 
-    public int Life = 1; //  How much life does the monster have
+    public float Life = 1; //  How much life does the monster have
     public int damage = 1; // How much damage does the monster give
 
     int currentWaypoint = 0; // The current waypoint of the monster
@@ -28,13 +28,18 @@ public class Enemy : MonoBehaviour
     public GameObject spawnMonster;
 
     public float turnSpeed = 5f;
-   
+
+  
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         wayPoints = Waypoints.points; // Associates the waypoints variable with the right points
+        
+        Life = Life * UIJogador.dificultymeter;
+          
     }
 
     // Update is called once per frame
@@ -54,6 +59,8 @@ public class Enemy : MonoBehaviour
             SpawnEnemy.totalMonsters.Remove(gameObject);
             Destroy(gameObject);
         } // if the monster life is equal or less than zero it dies an gives the reward to the player
+
+        
 
         Move(currentDisplacement += speed * Time.deltaTime); // if life diferent from 0 it moves
     }

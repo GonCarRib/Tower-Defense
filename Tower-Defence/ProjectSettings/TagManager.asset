@@ -9,6 +9,8 @@ TagManager:
   - TurretDefault
   - upgradePanel
   - Selected
+  - UpgradeText
+  - SellText
   layers:
   - Default
   - TransparentFX
