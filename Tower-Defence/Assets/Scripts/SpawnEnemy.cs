@@ -20,6 +20,15 @@ public class SpawnEnemy : MonoBehaviour
 
 
 
+    void Start()
+    {
+        // Reset the spawning system
+        totalMonsters.Clear();
+        numMonsters = 1;
+        tier = 0;
+        delaySpawn = false;
+    }
+
     // Update is called once per frame
     void Update()
     {

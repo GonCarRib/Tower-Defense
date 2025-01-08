@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    void Resume() // Resumes the game
+    public void Resume() // Resumes the game
     {
          pauseMenuUI.SetActive(false);
          Time.timeScale = 1f;
@@ -39,8 +39,9 @@ public class PauseMenu : MonoBehaviour
          IsGamePaused = true;
     }
 
-    public void LoadMenu() // Load Main menu
+    public void LoadMenu()
     {
+        Time.timeScale = 1f; // Reset time scale
         SceneManager.LoadScene("Menu");
     }
 
